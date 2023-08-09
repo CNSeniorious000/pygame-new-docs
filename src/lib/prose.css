@@ -1,0 +1,110 @@
+.prose {
+	@apply text-gray-800 font-sans;
+}
+
+.prose :is(h1, h2, h3, h4, h5, h6) {
+	@apply font-normal mt-6 tracking-wide;
+}
+
+.prose .sig {
+	@apply font-bold text-violet-700 text-xl pb-2 pt-4 sm:pt-18 sm:-mt-10;
+}
+
+.prose .signature {
+	@apply font-mono font-bold;
+}
+
+.prose a {
+	@apply no-underline font-bold text-violet-700;
+}
+
+.prose a.toc {
+	@apply py-1 px-2 -my-1 -mx-2 rounded border border-dashed border-transparent hover:border-gray-300 font-mono font-bold;
+}
+
+.prose table {
+	@apply border border-dashed border-gray-200 rounded p-2;
+}
+
+.prose tbody {
+	@apply <md:( flex flex-col gap-4 my-2 );
+}
+
+.prose tr {
+	@apply <md:( flex flex-col gap-1 );
+}
+
+.prose td {
+	@apply <md:py-0;
+}
+
+.prose table td:nth-child(1) {
+	@apply w-min max-w-min whitespace-nowrap;
+}
+
+.prose table td:nth-child(2) {
+	@apply hidden;
+}
+
+.prose table td:nth-child(3) {
+	@apply w-full <sm:text-sm;
+}
+
+.tooltip-content {
+	@apply hidden;
+}
+
+a.headerlink {
+	@apply ml-2 text-gray-300 opacity-0 [.sig:hover_&]:opacity-100 transition-opacity;
+}
+
+.line {
+	@apply text-sm my-1;
+}
+
+.summaryline {
+	@apply text-gray-700 pb-4 block;
+}
+
+.prose code::before,
+.prose code::after {
+	@apply hidden;
+}
+
+.prose pre {
+	@apply bg-gray-50 border border-dashed border-gray-300 text-gray-800 text-3.5 line-height-relaxed p-4;
+}
+
+.prose pre::-webkit-scrollbar {
+	@apply hidden;
+}
+
+.prose code {
+	@apply font-mono text-base;
+}
+
+.prose .pre,
+.prose pre {
+	@apply font-mono font-500;
+}
+
+.prose code.docutils.literal {
+	@apply text-sm py-0.5 px-1.5 -my-0.5 mx-0.5 border border-dashed text-violet-700 border-violet-300 bg-violet-300/5 rounded;
+	@apply [.sig-name>&]:-ml-0.5;
+}
+
+.prose li > p {
+	@apply my-1;
+}
+
+.prose dd {
+	@apply !text-base;
+}
+
+.prose blockquote {
+	@apply font-not-italic bg-gray-50 border border-dashed border-gray-300 rounded px-5;
+}
+
+.prose blockquote blockquote {
+	@apply p-0 ml-5 bg-transparent border-none;
+}
